@@ -16,3 +16,4 @@ public interface BookRepository extends JpaRepository<Book, Long> {
 	@RestResource(path = "searchbykeyword")
 	Page<Book> findByNameContaining(@Param("name") String keyword, Pageable pageable);
 }
+
