@@ -14,10 +14,12 @@
       <div class="row">
         <div class="col-lg-4 col-md-6 mb-4" *ngFor="let tempBook of books">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top img-responsive" [src]="tempBook.imageUrl"></a>
+            <a routerLink="/books/{{tempBook.id}}">
+              <img class="card-img-top img-responsive" [src]="tempBook.imageUrl">
+            </a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">{{ tempBook.name }}</a>
+                <a routerLink="/books/{{tempBook.id}}">{{ tempBook.name }}</a>
               </h4>
               <h5>{{ tempBook.unitPrice | currency: 'INR' }}</h5>
               <p class="card-text text-truncate">{{ tempBook.description }}</p>

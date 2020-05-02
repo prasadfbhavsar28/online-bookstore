@@ -41,6 +41,14 @@ export class BookService {
     return this.getBooksList(searchUrl);
   }
 
+  getBookDetails(bookId: number): Observable<Book>{
+
+    const bookDetailsUrl = `${this.baseUrl}/${bookId}`;
+    
+    return this.httpClient.get<Book>(bookDetailsUrl);
+  }
+
+
 }
 
 
